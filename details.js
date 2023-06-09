@@ -17,7 +17,7 @@ function loadCourseDetails(course) {
 function fetchCourseDetails(id) {
   fetch(`http://localhost:8081/api/courses/${id}`)
     .then((response) => response.json())
-    .then((jsoned) => loadCourseDetails(jsoned));
+    .then((content) => loadCourseDetails(content));
 }
 
 window.addEventListener("load", (event) => {
